@@ -1,7 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import Navigation from "./Navigation";
-import Input from "./Input";
+import Logic from "./Logic";
 import "./App.css";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     return (
         <div className="App">
             <Navigation />
-            <Input />
+            <Logic />
         </div>
     );
 }

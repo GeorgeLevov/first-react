@@ -1,42 +1,44 @@
-.Logic {
+.Input {
     display: flex;
     flex-direction: column;
-    padding: 0px 64px;
+    /* padding: 0px 64px; */
 }
 
-.Logic form {
+.Input form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 64px;
+    gap: 16px;
 
     margin: 32px 0px;
 }
 
-.Logic form input {
+.Input form input {
     border-radius: 5px;
     border: 1px solid var(--blue);
     flex: 1;
     flex-basis: 50%;
+    /* width: 75%; */
 }
 
-.Logic .submitButton {
+.Input .submitButton {
     width: 400px;
     background-color: var(--blue);
     color: white;
     margin: 0 auto;
 }
 
-.Logic .generatedImage {
-    margin: 32px;
-    max-height: 550px;
-    object-fit: contain;
-}
-
 @media only screen and (min-width: 600px) {
-    /* .Navigation {
-        height: 5vh;
-    } */
+    .Input form {
+        flex-direction: row;
+        gap: 64px;
+    }
+
+    .Input form {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 32px;
+    }
 }

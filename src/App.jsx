@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navigation from "./Navigation";
 import Input from "./Input";
 import Image from "./Image";

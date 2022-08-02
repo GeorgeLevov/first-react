@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Input.css";
-import imgData from "../imgData";
 import Image from "./Image";
 
-function Input() {
+export default function Input() {
+    const [allImages, setAllImages] = useState([]);
+
     const [imageObject, setImageObject] = useState({
         tcaption: "",
         bcaption: "",
         randomImage: "http://i.imgflip.com/1bij.jpg",
     });
 
-    const [allImages, setAllImages] = useState(imgData);
-
     function getImage() {
-        const imgArray = allImages.data.memes;
+        const imgArray = allImages;
         const randomNumber = Math.floor(Math.random() * imgArray.length);
         setImageObject((prevObject) => ({
             ...prevObject,
@@ -29,6 +28,14 @@ function Input() {
         }));
         console.log(imageObject);
     }
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then((res) => res.json())
+            .then((jsonData) => {
+                setAllImages(jsonData.data.memes);
+            });
+    }, []);
 
     return (
         <div className="Input">
@@ -64,5 +71,3 @@ function Input() {
         </div>
     );
 }
-
-export default Input;

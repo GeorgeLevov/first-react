@@ -9,4 +9,4 @@ The app utilizes:
 -  React **useState** to then manage the generated text and image between renders
 
 ### 
-A deployed version of the app can be found <a href="https://moonlit-zabaione-9214cd.netlify.app/" target="_blank">here</a>
+A deployed version of the app can be found <a href="https://react-caption-generator.netlify.app/" target="_blank">here</a>
